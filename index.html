@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Kickstart Firefox OS App</title>
+
+		<meta name="description" content="A Presentention on building the Hello World app for Firefox OS">
+		<meta name="author" content="Rabbi Hossain">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Kickstart Firefox OS App</h2>
+				</section>
+
+				<section>
+					<h2>Introduction</h2>
+					<p>Maybe you all know what Firefox OS is. It is a mobile operating system introduced by Mozilla.</p>
+					<br />
+					<p>It uses web apps as its native apps. That means you can build an app for Frefox OS by using HTML5, CSS & JS.</p>
+				</section>
+
+				<section>
+					<h2>Saying Hello!</h2>
+				</section>
+				<section>
+					<h2>What I Need to Know?</h2>
+					<p>To build an app. You need to know the basics of...</p>
+					<ul>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+					</ul>
+				</section>
+				<section>
+					<h2>What Tools I Need?</h2>
+					<ul>
+					<li>Text Editor</li>
+					<li>Latest Firefox Browser</li>
+					<li>Firefox OS Simulator</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Text Editor</h2>
+					<p>You can choose any text editor you want. To build our first "Hello World" app, we will create files like...</p>
+					<ul>
+					<li>index.html</li>
+					<li>manifest.webapp</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Latest Firefox Browser</h2>
+					<p>We will use it to test our code and Installing the app on our Simulator Add-on.</p>
+				</section>
+				<section>
+					<h2>Firefox OS Simulator</h2>
+					<p>Since we don't have any devices to test our apps, we will use this Simulator Add-on to test our app.</p>
+					<br />
+					<p>The Simulator Add-on give you an option to run your app in a device like environment.</p>
+				</section>
+				
+				<section>
+					<h2>Let's Say Hello Now!</h2>
+				</section>
+
+				<section>
+					<h2>Step - 1: Creating Working Directory</h2>
+					<p>Create a directory or folder named <a>Hello</a> in your computer.</p>
+					<br />
+					<p>We will use this folder to store and access our "Hello World" app's files.</p>
+				</section>
+
+				<section>
+					<h2>Step - 2: Write index.html</h2>
+					<p>Create a file named <a>index.html</a> in our Hello directory.</p>
+					<br />
+					<p>Now write these codes here...</p>
+					<img src="code.png" />
+				</section>
+
+				<section>
+					<h2>Testing The code in Browser</h2>
+					<p>Now open the file in your Firefox Browser.</p>
+				</section>
+
+				<section>
+					<img src="fifox.png" />
+				</section>
+				
+				<section>
+					<p>Looks like the code is working but it doesn't give a mobile app like feel.</p>
+					<br />
+					<p>Press <a>Ctrl + Shift + M</a>. It will show your page in mobile like screen size</p>
+				</section>
+
+				<section>
+					<img src="fifoxm.png" />
+				</section>
+				
+				<section>
+					<h2>Step - 3: Creating Manifest File</h2>
+					<p>Now we will create a manifest file named <a>manifest.webapp</a>.</p>
+					<br />
+					<p>All Firefox OS apps need this kind of manifest file. This manifest file contains the information related to the app. For example, this manifest file contains the apps Name, Description, Icon, Permission etc. Manifest file can have any name, but it should have .webapp extension.  </p>
+				</section>
+				
+				<section>
+					<p>Now create a manifest file named <a>manifest.webapp</a> and put this code inside it.</p>
+				<pre>
+					<code>
+{
+  "name": "Hello World",
+  "description": "App description goes here",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://your-homepage-here.org"
+  },
+  "default_locale": "en"
+}
+					</code>
+				</pre>
+				</section>
+				
+				<section>
+					<h2>Congrats!</h2>
+					<p>You've just completed building your app.</p>
+					<p>We will now see it in action using Firefox OS Simulator</p>
+				</section>
+				
+				<section>
+					<p>To open Firefox OS Simulator, go to <a>Tools > Web Developer > App Manager</a>. Now click <a>Start Simulator > Firefox OS x.x</a>.</p>
+					<p>On App section, Click on "Add Packaged App"</p>
+					<p>Select the folder where manifest.webapp file you've just created. Click update </p>
+					<img src="AppManager.png" />
+				</section>
+				
+				<section>
+					<p>Now go to the Firefox OS Simulator and open your "Hello World" app.</p>
+					<p>You will get something like this...</p>
+					<img src="hello.png" />
+				</section>
+
+				<section>
+					<h2>Congrats Again!</h2>
+					<p>Your first app is up and running perfectly.</p>
+				</section>
+
+				<section>
+					<h2>Any Questions?</h2>
+				</section>
+				
+				<section>
+					<h2>Thanks</h2>
+					<h3>Rabbi Hossain / me@2hr.me</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
